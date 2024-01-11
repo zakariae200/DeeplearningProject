@@ -1,0 +1,53 @@
+/* navbar.component.css */
+.navbar {
+  background-color: #fabdbd;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #704b1df6;
+  margin-right: 15px; /* Espace entre le logo et le texte */
+}
+
+.navbar-logo {
+  width: 65px; 
+  height: auto;
+  margin-right: 5px; /* Espace entre le logo et le texte */
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+.form-inline {
+  display: flex;
+  align-items: center;
+}
+
+.form-control {
+  margin-right: 10px;
+}
+
+.btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  color: #f03c3c;
+  background-color: #007bff;
+  border-color: #007bff;
+}

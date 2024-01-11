@@ -1,0 +1,30 @@
+<section class="register-section">
+  <div class="register">
+    <div class="row">
+      <div class="col-md-3 register-left">
+        <h3>نهاية الإختبار</h3>
+        <input type="submit" name="" routerLink="/test" value="بداية إختبار جديد"/><br/>
+      </div>
+      <div class="col-md-9 register-right">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h3 class="register-heading">لقد حصلت على نتيجة {{ grade }}/20</h3>
+            <div class="row register-form">
+              <div class="form-group col-md-10" *ngFor="let answer of answers; let i = index">
+                <div class="form-row">
+                  <label for="question{{ i + 1 }}">{{ questions[i] }}</label>
+                  <div class="form-control form-row">
+                    <h5>{{ answer.answer }}</h5>
+                    <span class="badge badge-success" *ngIf="answer.score === 2">نتيجة = 2</span>
+                    <span class="badge badge-warning" *ngIf="answer.score === 1">نتيجة = 1</span>
+                    <span class="badge badge-danger" *ngIf="answer.score === 0">نتيجة = 0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

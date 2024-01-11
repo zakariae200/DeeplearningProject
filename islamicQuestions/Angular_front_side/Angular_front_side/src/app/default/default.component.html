@@ -1,0 +1,45 @@
+<section>
+
+  <div class="register">
+    <div class="row">
+      <div class="col-md-1 register-left">
+        <!-- <h5> المرجو الإجابة على هذه الأسئلة باللغة العربية  و صياغة الاجوبة بأسلوبك الخاص </h5>
+                        -->
+
+      </div>
+      <div class="col-md-9 register-right">
+
+        <div class="tab-content" id="myTabContent">
+
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h3 class="register-heading">ابدأو الامتحان يا براعم واحصلوا على تقييم حول مكتسباتكم في مادة التربية
+              الاسلامية عبر الإجابة على الاسئلة التالية</h3>
+              <div class="row register-form">
+                <form (submit)="onSubmit()">
+                  <div class="form-group col-md-20">
+                    <div class="form-row" *ngFor="let question of questions; let i = index">
+                      <div [hidden]="currentQuestionIndex !== i">
+                        <div class="form-row">
+                          <label>{{ question.text }}</label>
+                          <textarea type="text" class="form-control" name="answer" [(ngModel)]="ansr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <button type="button" class="btn btn-primary" id="button" (click)="nextQuestion()"
+                      [hidden]="currentQuestionIndex === 9" style="margin-right: 3%;">السؤال التالي</button>
+                  </div>
+                  <div class="form-row" [hidden]="currentQuestionIndex < 9">
+                    <button type="button" class="btn btn-info" id="button" (click)="onSubmit()"
+                      style="margin-right: 3%;">أحصل على التقييم</button>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
